@@ -1,0 +1,375 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+    box-sizing: border-box;
+}
+
+body{
+    background: black;
+    color:#fff;
+
+}
+
+.header{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0.5,0,0,0.3),rgba(0,0,0,0.5)),url(/images/header-image.png);
+    background-size: cover;
+    background-position: center;
+    padding: 10px 8%;
+    position: relative;
+}
+
+
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 0;
+    margin-right: 30px;
+    margin-left: 40px;
+}
+
+.logo{
+    width: 200px;
+    cursor: pointer;
+}
+
+nav button{
+    border: 0;
+    outline: 0;
+    background:#db0001;
+    color: #fff;
+    padding: 10px 35px;
+    font-size: 20px;
+    border-radius: 4px;
+    margin-left: 50px;
+}
+
+.language-btn{
+    display: inline-flex;
+    align-items: center;
+    background: transparent;
+    border: 1px solid #fff;
+    padding: 7px 10px;
+}
+
+.language-btn img{
+    width: 10px;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+.header-content{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    margin-top: 100px;
+}
+
+.header-content h1{
+    font-size: 75px;
+    line-height: 70px;
+    font-weight: 600;
+    max-width: 750px;
+}
+
+.header-content h3{
+    font-weight: 800;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.header-content p{
+    font-size: 20px;
+    line-height: 10px;
+    font-weight: 400;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.header-content button{
+    border: 0;
+    outline: 0;
+    background:#db0001;
+    color: #fff;
+    padding: 25px 40px;
+    font-size: 20px;
+    border-radius: 5px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.header-content button:hover{
+    background: #fff;
+    color: #db0001;
+    transition: all 0.3s ease;
+    
+}
+
+.email-form input[type="email"] {
+    width: 480px; 
+    height: 65px;
+    background-color: rgba(0,0,0,0.8); 
+    margin-right: 10px;
+}
+
+.email-form input[type="email"]::placeholder {
+    color: #fff; 
+    font-size: 20px;
+    text-indent: 20px; /
+}
+
+
+
+.features{
+    padding: 50px 12%;
+    font-size: 22px;
+
+}
+
+.row{
+    display: flex;
+    width: 100%;
+    align-items :center;
+    flex-wrap:wrap;
+    padding: 50px 0px;
+}
+
+.text-col{
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+
+.img-col{
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+
+.img-col img{
+    display: block;
+    width: 90%;
+    margin: auto;
+}
+
+.features h2{
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+
+.FAQ{
+    padding: 10px 12%;
+    text-align: center;
+    font-size: 18px;
+}
+
+.FAQ h2{
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.accordian{
+    margin: 60px auto;
+    width: 100%;
+    max-width: 750px;
+}
+
+.accordian li{
+    list-style: none;
+    width: 100%;
+    padding: 5px;
+}
+
+.accordian li label{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    background: #303030;
+    margin-bottom: 2px;
+    cursor: pointer;
+    position: relative;
+}
+
+label::after{
+    content: '+';
+    font-size: 34px;
+    position: absolute;
+    right: 20px;
+    transition: transform 0.5s ease;
+}
+
+
+input[type = "radio"]{
+    display: none;
+}
+
+.accordian .content{
+    background: #303030;
+    text-align:left;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s;
+}
+
+.accordian input[type = "radio"]:checked ~ .content{
+    max-height: 1000px;
+    padding: 20px;
+    transition: all 0.5s ease-in-out;
+}
+
+.accordian input[type = "radio"]:checked ~ label::after{
+    content: '-';
+    transition: all 0.5s ease-in-out;
+    transform: rotate(135degree);
+}
+
+.email-forms input[type="email"] {
+    width: 50%;
+    padding: 20px 40px;
+    font-size: 18px;
+    color: #fff;
+    border-radius: 5px;
+    margin: 12px 0;
+    background-color: rgba(45, 44, 44, 0.3); 
+    border: 1px solid #2e2d2d;
+}
+
+.email-forms input[type="email"]::placeholder {
+    color: #fff; 
+}
+
+.email-forms button.submit {
+    margin-top: 28.5px;
+    font-size: 18px;
+    padding: 21px 57px;
+    width: 200px;
+    border-radius: 6px;
+    margin-left: 10px;
+    background-color: #db0001;
+    color: #fff;
+    transition: background-color 0.3s; 
+}
+
+.email-forms button.submit:hover {
+    background-color: #767575;
+}
+
+.FAQ small{
+    font-size: 16px;
+}
+
+.footer{
+    padding: 50px 15% 10px;
+    border-top: 4px solid #333;
+    color: #777;
+}
+
+.footer h2{
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.footer .col{
+    flex-basis: 25%;
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+
+.footer .col a{
+    text-decoration: none;
+    color: #777;
+    display: block;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.footer .row{
+    align-items: flex-start;
+    padding: 10px 0;
+}
+
+.footer .language-btn{
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 3px;
+}
+
+.copyright{
+    font-size: 14px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/*  Making it Responsive css media Queries */
+
+@media only screen and (max-width: 600px) {
+    .logo{
+        width: 100px;
+    }
+    nav button{
+        padding: 5px 10px
+    }
+    
+    nav.language-btn{
+        padding: 4px 8px;
+    }
+
+    .header-content{
+        position: unset;
+        transform: unset;
+        padding-top: 150px;
+    }
+
+    .header-coontent h1{
+        font-size: 12px;
+        padding: 10px 15px;
+    }
+
+    .text-col .img-col{
+        flex-basis: 100%;
+    }
+
+    .features h2{
+        font-size: 30px;
+    }
+
+    .features p{
+        font-size: 16px;
+    }
+
+    .row:nth-child(2) .row:nth-child(4){
+        flex-direction: column-reverse;
+    }
+    
+    .features .row{
+        padding: 10px 0;
+    }
+
+    .FAQ h2{
+        font-size: 25px;
+    }
+    
+    .accordian .content{
+        font-size: 14px
+    }
+
+    .accordian li label{
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    label::after{
+        font-size: 24px;
+    }
+}
